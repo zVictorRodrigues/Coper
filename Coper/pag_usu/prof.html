@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/8d457baf04.js" crossorigin="anonymous"></script>
+  <title>Página inicial - Professor</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #3B5998;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 50px;
+      height: 8vh;
+    }
+
+    header div {
+      width: 33%;
+      height: 6vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .head1 img {
+      width: 60%;
+      height: 450%;
+      float: left;
+      margin-left: -40px;
+      margin-top: -70px;
+    }
+
+    .head2 img {
+      width: 60%;
+      height: 250%;
+      margin-top: -25px;
+    }
+
+    .head3 a i {
+      margin-top: 4%;
+    }
+
+    h1{
+      text-align: center;
+    }
+
+    main {
+      padding: 60px;
+      text-align: center;
+      margin-top: -60px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      margin-top: 50px;
+    }
+
+    .grid-item {
+      background-color: #3B5998;
+      color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition: transform 0.3s ease;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .grid-container a {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .grid-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .grid-item h2 {
+      margin-top: 0;
+    }
+    </style>
+</head>
+
+<body>
+  <header>
+    <div class="head1">
+      <img src="../img/FMP2.png">
+    </div>
+    <div class="head2"><img src="../img/coper.jpeg" alt=""></div>
+    <div class="head3"><a href="../logout.php"><i class="fa-solid fa-arrow-right-from-bracket"
+          style="color: #ffffff;"></i></a></div>
+  </header>
+
+  <h1>Tela inicial</h1>
+
+  <main>
+    <div class="grid-container">
+      <a href="../pag_sec/extensao.html">
+        <div class="grid-item">
+          <h2>Extensão</h2>
+          <p>Ver mais</p>
+
+        </div>
+      </a>
+      <a href="../pag_sec/respon.html">
+        <div class="grid-item">
+          <h2>Responsabilidade Social</h2>
+          <p>Ver mais</p>
+        </div>
+      </a>
+      <a href="../pag_sec/projetos2.html">
+        <div class="grid-item">
+          <h2>Projetos</h2>
+          <p>Cadastrar projetos</p>
+
+        </div>
+      </a>
+      <a href="../pag_sec/eventos2.html">
+        <div class="grid-item">
+          <h2>Eventos</h2>
+          <p>Cadastrar Eventos</p>
+
+        </div>
+      </a>
+      <a href="../pag_sec/relatorios.html">
+        <div class="grid-item">
+          <h2>Gerar Relatório</h2>
+          <p>Ver mais</p>
+        </div>
+      </a>
+      </a>
+    </div>
+  </main>
+</body>

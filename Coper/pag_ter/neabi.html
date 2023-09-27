@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8d457baf04.js" crossorigin="anonymous"></script>
+    <title>Página inicial - Coord</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #3B5998;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 50px;
+            height: 8vh;
+        }
+
+        form {
+            background-color: #3B5998;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+            color: #fff;
+            height: 60%;
+
+        }
+
+        header div {
+            width: 33%;
+            height: 6vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .head1 img {
+            width: 60%;
+            height: 450%;
+            float: left;
+            margin-left: -40px;
+            margin-top: -70px;
+        }
+
+        .head2 img {
+            width: 60%;
+            height: 250%;
+            margin-top: -25px;
+        }
+
+        .head3 a i {
+            margin-top: 4%;
+        }
+
+        .title-neabi {
+            text-align: center;
+            margin: 20px;
+            font-size: 38px;
+        }
+
+        footer a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .grid-item-2 {
+            background-color:#3B5998;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease;
+            text-align: center;
+            cursor: pointer;
+            color: #000000;
+            margin: 0 41%;
+            width: 15%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 200px;
+          }
+
+          .button-text {
+          color: #fff;
+         }
+
+        .grid-item-2:hover {
+            transform: translateY(-5px);
+        }
+
+        #file-list {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #file-list li {
+            list-style: none;
+        }
+
+        #file-list a {
+            color: #000;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="head1">
+            <img src="../img/FMP2.png">
+        </div>
+        <div class="head2"><img src="../img/coper.jpeg" alt=""></div>
+        <div class="head3"><a href="../logout.php"><i class="fa-solid fa-arrow-right-from-bracket"
+                    style="color: #ffffff;"></i></a></div>
+    </header>
+    <h2 class="title-neabi">Neabi</h2>
+
+    <h3>O NEABI-FMP foi criado em 2011 com o objetivo de promover o debate científico da temática afro-brasileira e indígena, atendendo as leis N. 10.639/2003 e N. 11.645/2008 e as Diretrizes Curriculares Nacionais para a Educação das Relações Étnico-raciais e para o Ensino de História e Cultura Afro-Brasileira e Africana (Resolução nº 1, de 17 de junho de 2004).
+        O NEABI-FMP está vinculado ao curso de Pedagogia devido ao caráter da lei, porém atende acadêmicos dos três cursos de graduação e agrega diferentes projetos dentro da temática.</h3>
+<br>
+<br>
+    <form action="processar_upload.php" method="POST" enctype="multipart/form-data" id="upload-form">
+        <label for="arquivo">Selecione um arquivo:</label>
+        <br>
+        <br>
+        <input type="file" id="arquivo" name="arquivo">
+        <br>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <div id="file-container">
+        <h3>Arquivos enviados:</h3>
+        <ul id="file-list"></ul>
+    </div>
+
+    <div class="grid-item-2" onclick="goBack()">
+        <span class="button-text">Voltar</span>
+      </div>
+      <script>
+      function goBack() {
+      window.history.back();
+      } 
+      </script> 
+
+    <script>
+        // Função para exibir o nome do arquivo após o envio
+        function exibirArquivoSelecionado(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            var inputArquivo = document.getElementById('arquivo');
+            var fileList = document.getElementById('file-list');
+
+            // Iterar sobre os arquivos selecionados
+            for (var i = 0; i < inputArquivo.files.length; i++) {
+                var file = inputArquivo.files[i];
+                var listItem = document.createElement('li');
+                var link = document.createElement('a');
+                link.href = URL.createObjectURL(file);
+                link.target = '_blank';
+                link.textContent = file.name;
+
+                listItem.appendChild(link);
+                fileList.appendChild(listItem);
+            }
+        }
+
+        // Adicionar um evento de escuta ao botão de envio
+        var form = document.getElementById('upload-form');
+        form.addEventListener('submit', exibirArquivoSelecionado);
+    </script>
+</body>
+
+</html>
