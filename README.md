@@ -1,2 +1,2 @@
 # Meus-Projetos
-Meus projetos desenvolvidos durante a faculdade
+Alguns dos meus projetos desenvolvidos durante a faculdade.
