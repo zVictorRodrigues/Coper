@@ -1,2 +1,3 @@
-# Meus-Projetos
-Alguns dos meus projetos desenvolvidos durante a faculdade.
+# Coper
+Sistema para Coper, setor responsavel por eventos e envios de certificados da FMP
+
