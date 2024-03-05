@@ -1,3 +1,3 @@
 # Coper
-Sistema para Coper, setor responsavel por eventos e envios de certificados da FMP
+Sistema para Coper, setor responsável por eventos e envios de certificados da FMP
 
